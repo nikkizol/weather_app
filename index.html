@@ -14,15 +14,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Weather Forecast</h1>
-<div class="container-2">
-    <img id="img" class="d-flex align-self-center" src="/images/pathToYourImage.png"
-         alt="Generic placeholder image">
-    <div class="centered"></div>
-    <div class="centered-1"></div>
+<div class="wrap">
+    <h1>Weather Forecast</h1>
+    <div class="card-body topCard">
+        <h3 class="card-title centered-1" style = "text-transform:uppercase;"></h3>
+        <h3 class="card-text centered"></h3>
+        <img class="card-text centered-2" src=""/>
+        <h3 class="card-text centered-3"></h3>
+    </div>
 </div>
+
 <div class="container">
     <div class="d-flex justify-content-center h-100">
         <div class="searchbar">
@@ -31,35 +35,41 @@
         </div>
     </div>
 </div>
-
-<div class="card-group">
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title day2"></h4>
-            <p class="card-text day2t"></p>
+<div class="container-2">
+    <div class="forecast">
+        <h3>For next four days:</h3>
+        <div class="card-group">
+            <div class="card mr-2">
+                <div class="card-body">
+                    <h4 class="card-title day2"></h4>
+                    <p class="card-text day2t"></p>
+                </div>
+            </div>
+            <div class="card mr-2">
+                <div class="card-body">
+                    <h4 class="card-title day3"></h4>
+                    <p class="card-text day3t"></p>
+                </div>
+            </div>
+            <div class="card mr-2">
+                <div class="card-body">
+                    <h4 class="card-title day4"></h4>
+                    <p class="card-text day4t"></p>
+                </div>
+            </div>
+            <div class="card mr-2">
+                <div class="card-body">
+                    <h4 class="card-title day5"></h4>
+                    <p class="card-text day5t"></p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title day3"></h4>
-            <p class="card-text day3t"></p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title day4"></h4>
-            <p class="card-text day4t"></p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title day5"></h4>
-            <p class="card-text day5t"></p>
-        </div>
+        <!--        <img id="img" class="d-flex align-self-center" src=""-->
+        <!--             alt="Generic placeholder image">-->
+        <!--        <div class="centered"></div>-->
+        <!--        <div class="centered-1"></div>-->
     </div>
 </div>
-
-
 <script src="script.js"></script>
 <script src="key.js"></script>
 <!-- Optional JavaScript -->
