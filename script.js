@@ -1,4 +1,5 @@
 (() => {
+    document.querySelector(".container-2").style.display = "none";
     function gropedByDate(dataArray) {
         let ref = {};
         const res = dataArray.reduce(function (gropedData, elem) {
@@ -13,6 +14,16 @@
         }, []);
         return res;
     }
+    async function picOfCity() {
+        let input = document.getElementById('city_input').value
+        // await fetch(`https://api.unsplash.com/search/photos/1600x900/?query=${input}&client_id=${secretKey2}`)
+        //     .then(response => response.json())
+        //     .then((data) => {
+        //         console.log(data)
+                document.getElementById("img").src = `https://source.unsplash.com/600x600/?${input},city`
+            // })
+    }
+
     function weatherApp() {
         let input = document.getElementById('city_input').value
         fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${input}&units=metric&appid=${secretKey}`)
@@ -28,8 +39,8 @@
                         return a + b;
                     }, 0);
                     let avgBe = totalWeather / tempArr.length
-                    document.querySelector(".day1t").innerHTML = Math.round(avgBe)
-                    document.querySelector(".day1").innerHTML = formatData[0][i].dt_txt.split(" ")[0]
+                    document.querySelector(".centered").innerHTML = Math.round(avgBe) + "°C"
+                    document.querySelector(".centered-1").innerHTML = "Today "  + "in " + input
                 }
                 for (let i = 0; i < formatData[1].length; i++) {
                     tempArr.push(formatData[1][i].main.temp)
@@ -37,7 +48,7 @@
                         return a + b;
                     }, 0);
                     let avgBe = totalWeather / tempArr.length
-                    document.querySelector(".day2t").innerHTML = Math.round(avgBe)
+                    document.querySelector(".day2t").innerHTML = Math.round(avgBe)+ "°C"
                     document.querySelector(".day2").innerHTML = formatData[1][i].dt_txt.split(" ")[0]
                 }
                 for (let i = 0; i < formatData[2].length; i++) {
@@ -46,7 +57,7 @@
                         return a + b;
                     }, 0);
                     let avgBe = totalWeather / tempArr.length
-                    document.querySelector(".day3t").innerHTML = Math.round(avgBe)
+                    document.querySelector(".day3t").innerHTML = Math.round(avgBe)+ "°C"
                     document.querySelector(".day3").innerHTML = formatData[2][i].dt_txt.split(" ")[0]
                 }
                 for (let i = 0; i < formatData[3].length; i++) {
@@ -55,7 +66,7 @@
                         return a + b;
                     }, 0);
                     let avgBe = totalWeather / tempArr.length
-                    document.querySelector(".day4t").innerHTML = Math.round(avgBe)
+                    document.querySelector(".day4t").innerHTML = Math.round(avgBe)+ "°C"
                     document.querySelector(".day4").innerHTML = formatData[3][i].dt_txt.split(" ")[0]
                 }
                 for (let i = 0; i < formatData[4].length; i++) {
@@ -64,15 +75,30 @@
                         return a + b;
                     }, 0);
                     let avgBe = totalWeather / tempArr.length
-                    document.querySelector(".day5t").innerHTML = Math.round(avgBe)
+                    document.querySelector(".day5t").innerHTML = Math.round(avgBe)+ "°C"
                     document.querySelector(".day5").innerHTML = formatData[4][i].dt_txt.split(" ")[0]
+                    console.log(typeof formatData[4][i].dt_txt.split(" ")[0])
                 }
 
 
             })
+
     }
 
-    document.getElementById('run').addEventListener('click', weatherApp)
+
+    document.getElementById('run').addEventListener('click', function () {
+            weatherApp ();
+            picOfCity ();
+        document.querySelector(".container-2").style.display='block'
+    });
+
+    document.getElementById('city_input').addEventListener('keyup', function (e) {
+        if (e.key === 'Enter') {
+            weatherApp ();
+            picOfCity ();
+            document.querySelector(".container-2").style.display='block'
+        }
+    });
 
 })();
 
