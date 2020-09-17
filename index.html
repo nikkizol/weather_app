@@ -1,41 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>weather-app</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-<section class="material">
-    <form action="#" method="post">
-        <div class="field">
-            <label for="city_input">Please enter name of the City of your choice:</label>
-            <input type="text" name="city_input" id="city_input" />
+<h1>Weather Forecast</h1>
+<div class="container-2">
+    <img id="img" class="d-flex align-self-center" src="/images/pathToYourImage.png"
+         alt="Generic placeholder image">
+    <div class="centered"></div>
+    <div class="centered-1"></div>
+</div>
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+            <input id="city_input" class="search_input input-sm" type="text" name="" placeholder="Enter a city ...">
+            <a id="run" href="#" class="search_icon"><i class="fas fa-search"></i></a>
         </div>
-        <div class="actions">
-            <button type="button" id="run">Search</button>
+    </div>
+</div>
+
+<div class="card-group">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title day2"></h4>
+            <p class="card-text day2t"></p>
         </div>
-    </form>
-    <table class="tg">
-        <thead>
-        <tr>
-            <th class="day1"></th>
-            <th class="day2"></th>
-            <th class="day3"></th>
-            <th class="day4"></th>
-            <th class="day5"></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td class="day1t"></td>
-            <td class="day2t"></td>
-            <td class="day3t"></td>
-            <td class="day4t"></td>
-            <td class="day5t"></td>
-        </tr>
-        </tbody>
-    </table>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title day3"></h4>
+            <p class="card-text day3t"></p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title day4"></h4>
+            <p class="card-text day4t"></p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title day5"></h4>
+            <p class="card-text day5t"></p>
+        </div>
+    </div>
+</div>
+
+
 <script src="script.js"></script>
 <script src="key.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>weather-app</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<section class="material">-->
+<!--    <form action="#" method="post">-->
+<!--        <div class="field">-->
+<!--            <label for="city_input">Please enter name of the City of your choice:</label>-->
+<!--            <input type="text" name="city_input" id="city_input" />-->
+<!--        </div>-->
+<!--        <div class="actions">-->
+<!--            <button type="button" id="run">Search</button>-->
+<!--        </div>-->
+<!--    </form>-->
+<!--    <table class="tg">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th class="day1"></th>-->
+<!--            <th class="day2"></th>-->
+<!--            <th class="day3"></th>-->
+<!--            <th class="day4"></th>-->
+<!--            <th class="day5"></th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr>-->
+<!--            <td class="day1t"></td>-->
+<!--            <td class="day2t"></td>-->
+<!--            <td class="day3t"></td>-->
+<!--            <td class="day4t"></td>-->
+<!--            <td class="day5t"></td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--<script src="script.js"></script>-->
+<!--<script src="key.js"></script>-->
+<!--</body>-->
+<!--</html>-->
