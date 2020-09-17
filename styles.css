@@ -1,0 +1,114 @@
+
+body,html{
+    height: 100%;
+    width: 100%;
+    background: bisque;
+}
+h1 {
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+}
+.searchbar{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+}
+
+/*.searchbar:hover > .search_input{*/
+/*    padding: 0 10px;*/
+/*    width: 450px;*/
+/*    caret-color:white;*/
+/*    transition: width 0.4s linear;*/
+/*}*/
+.search_input{
+    padding: 0 10px;
+    width: 60%;
+    caret-color:white;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_icon{
+    background: white;
+    color: #353b48;
+}
+
+.search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+    position: relative;
+}
+/*.wrapper {*/
+/*    width: 60%;*/
+/*    max-width: 20%;*/
+/*    max-height: 20%;*/
+/*    margin: auto;*/
+/*    padding-top: 5%;*/
+
+/*}*/
+
+img {
+    width: 25%;
+    margin: auto;
+    border: 5px solid #353b48;
+
+}
+.container-2 {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: #353b48;
+    font-size: 25px;
+    /*border: 5px solid black;*/
+    padding: 5px;
+    background-clip: padding-box;
+}
+.centered-1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #353b48;
+    color: white;
+    font-size: 30px;
+    /*border: 5px solid black;*/
+    padding: 5px;
+    background-clip: padding-box;
+}
+.card-group {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 10%;
+}
+.card-title, .card-text {
+    text-align: center;
+}
