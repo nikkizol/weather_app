@@ -26,9 +26,9 @@
 - [X] Get the weather data using [axios](https://github.com/axios/axios) or another javascript AJAX enabled library or use the native JS fetch() method
 - Optional: Use a cdn link to link axios to your project.
 - [X] Display the weather for the next 5 days. Show the averages per day.
-- Apply styling to your project using media queries to make it responsive.
+- [X] Apply styling to your project using media queries to make it responsive.
 
 ## Extra challenges
 
-- Use the API of https://unsplash.com/ to show a photo of the city they entered in the form.
+- [X] Use the API of https://unsplash.com/ to show a photo of the city they entered in the form.
 - Use a graph library like Google Graphs to show a line graph of the temperature over time.
