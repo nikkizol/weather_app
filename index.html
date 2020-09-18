@@ -20,7 +20,15 @@
 <div class="wrap">
     <h1>Weather Forecast</h1>
     <div class="card-body topCard">
-        <h3 class="card-title centered-1" style="text-transform:uppercase;"></h3>
+        <h3>
+            <a data-toggle="collapse" id="centered-1" href="#collapseExample11" aria-expanded="false"
+               aria-controls="collapseExample" style="text-transform:uppercase;">
+            </a>
+            <div class="collapse" id="collapseExample11">
+                <img class="imgun" id="img" src="" width="500"/>
+            </div>
+
+        </h3>
         <h3 class="card-text centered"></h3>
         <img class="card-text centered-2" src=""/>
         <h3 class="card-text centered-3" style="text-transform:capitalize;"></h3>
@@ -37,102 +45,61 @@
 </div>
 
 <div class="container-2">
-<div class="forecast">
-    <h3>For next four days:</h3>
-        <div class="row d-flex justify-content-center">
+    <div class="forecast">
+        <h3>For next four days:</h3>
+        <div class="row card-group d-flex justify-content-center">
             <div class="col-2">
                 <p>
-                    <button class="btn btn-light btn-lg" id="day2" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                    <button class="btn btn-light btn-lg" id="day2" type="button" data-toggle="collapse"
+                            data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
                     </button>
                 </p>
                 <div class="collapse" id="collapseExample1">
                     <img id="day2Icon" src="">
-                    <p  id="day2t">
+                    <p id="day2t">
                     </p>
                 </div>
             </div>
             <div class="col-2">
                 <p>
-                    <button class="btn btn-light btn-lg" id="day3" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                    <button class="btn btn-light btn-lg" id="day3" type="button" data-toggle="collapse"
+                            data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
                     </button>
                 </p>
                 <div class="collapse" id="collapseExample2">
                     <img id="day3Icon" src="">
-                    <p  id="day3t">
+                    <p id="day3t">
                     </p>
                 </div>
             </div>
             <div class="col-2">
                 <p>
-                    <button class="btn btn-light btn-lg" id="day4" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                    <button class="btn btn-light btn-lg" id="day4" type="button" data-toggle="collapse"
+                            data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
                     </button>
                 </p>
                 <div class="collapse" id="collapseExample3">
                     <img id="day4Icon" src="">
-                    <p  id="day4t">
+                    <p id="day4t">
                     </p>
                 </div>
             </div>
             <div class="col-2">
                 <p>
-                    <button class="btn btn-light btn-lg" id="day5" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+                    <button class="btn btn-light btn-lg" id="day5" type="button" data-toggle="collapse"
+                            data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
                     </button>
                 </p>
                 <div class="collapse" id="collapseExample4">
                     <img id="day5Icon" src="">
-                    <p  id="day5t">
+                    <p id="day5t">
                     </p>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-<!--<div class="container-2">-->
-<!--    <div class="forecast">-->
-<!--        <h3>For next four days:</h3>-->
-<!--        <div class="card-group d-flex justify-content-center">-->
-<!--            <div class="mr-1 col-3">-->
-<!--                <div class="card-body">-->
-<!--                    <button class="btn btn-light card-title day2 day2t" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"></button>-->
-<!--                    <div class="collapse" id="collapseExample4">-->
-<!--                        <div class="card card-body">-->
-<!--                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad-->
-<!--                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente-->
-<!--                            ea proident.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="mr-1 col-3">-->
-<!--                <div class="card-body">-->
-<!--                    <button class="btn btn-light card-title day2 day2t" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"></button>-->
-<!--                    <div class="collapse" id="collapseExample4">-->
-<!--                        <div class="card card-body">-->
-<!--                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad-->
-<!--                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente-->
-<!--                            ea proident.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="mr-1">-->
-<!--                <div class="card-body">-->
-<!--                    <button class="btn btn-light card-title day4 day4t"></button>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="mr-1">-->
-<!--                <div class="card-body">-->
-<!--                    <button class="btn btn-light card-title day5 day5t"></button>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash;        <img id="img" class="d-flex align-self-center" src=""&ndash;&gt;-->
-<!--        &lt;!&ndash;             alt="Generic placeholder image">&ndash;&gt;-->
-<!--        &lt;!&ndash;        <div class="centered"></div>&ndash;&gt;-->
-<!--        &lt;!&ndash;        <div class="centered-1"></div>&ndash;&gt;-->
-<!--    </div>-->
-<!--</div>-->
+
 <script src="script.js"></script>
 <script src="key.js"></script>
 <!-- Optional JavaScript -->
@@ -148,46 +115,3 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>weather-app</title>-->
-<!--</head>-->
-<!--<body>-->
-<!--<section class="material">-->
-<!--    <form action="#" method="post">-->
-<!--        <div class="field">-->
-<!--            <label for="city_input">Please enter name of the City of your choice:</label>-->
-<!--            <input type="text" name="city_input" id="city_input" />-->
-<!--        </div>-->
-<!--        <div class="actions">-->
-<!--            <button type="button" id="run">Search</button>-->
-<!--        </div>-->
-<!--    </form>-->
-<!--    <table class="tg">-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th class="day1"></th>-->
-<!--            <th class="day2"></th>-->
-<!--            <th class="day3"></th>-->
-<!--            <th class="day4"></th>-->
-<!--            <th class="day5"></th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--        <tr>-->
-<!--            <td class="day1t"></td>-->
-<!--            <td class="day2t"></td>-->
-<!--            <td class="day3t"></td>-->
-<!--            <td class="day4t"></td>-->
-<!--            <td class="day5t"></td>-->
-<!--        </tr>-->
-<!--        </tbody>-->
-<!--    </table>-->
-<!--<script src="script.js"></script>-->
-<!--<script src="key.js"></script>-->
-<!--</body>-->
-<!--</html>-->
