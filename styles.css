@@ -1,5 +1,5 @@
 
-body,html{
+body, html {
     height: 100%;
     width: 100%;
     background-image: linear-gradient(to right top, #19c0e3, #33bce8, #49b8eb, #5db4ec, #70afeb, #6eb4f0, #6bbaf4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
@@ -7,18 +7,20 @@ body,html{
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
 }
+
 h1 {
     margin-top: 5%;
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-size: 60px;
 }
+
 h3 {
     text-align: center;
 
 }
-.searchbar{
-    /*margin-top: 5%;*/
+
+.searchbar {
     margin-bottom: 5%;
     height: 60px;
     background-color: #353b48;
@@ -26,36 +28,30 @@ h3 {
     padding: 10px;
 }
 
-.search_input{
+.search_input {
     color: white;
     border: 0;
     outline: 0;
     background: none;
     width: 0;
-    caret-color:transparent;
+    caret-color: transparent;
     line-height: 40px;
     transition: width 0.4s linear;
 }
 
-/*.searchbar:hover > .search_input{*/
-/*    padding: 0 10px;*/
-/*    width: 450px;*/
-/*    caret-color:white;*/
-/*    transition: width 0.4s linear;*/
-/*}*/
-.search_input{
+.search_input {
     padding: 0 10px;
     width: 60%;
-    caret-color:white;
+    caret-color: white;
     transition: width 0.4s linear;
 }
 
-.searchbar:hover > .search_icon{
+.searchbar:hover > .search_icon {
     background: white;
     color: #353b48;
 }
 
-.search_icon{
+.search_icon {
     height: 40px;
     width: 40px;
     float: right;
@@ -63,18 +59,10 @@ h3 {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color:white;
-    text-decoration:none;
+    color: white;
+    text-decoration: none;
     position: relative;
 }
-/*.wrapper {*/
-/*    width: 60%;*/
-/*    max-width: 20%;*/
-/*    max-height: 20%;*/
-/*    margin: auto;*/
-/*    padding-top: 5%;*/
-
-/*}*/
 
 img {
     display: block;
@@ -82,55 +70,48 @@ img {
     margin-right: auto;
 }
 
+.imgun {
+    margin-top: 8px;
+    -webkit-box-shadow: 0px 4px 23px 3px rgba(250, 247, 250, 0.55);
+    -moz-box-shadow: 0px 4px 23px 3px rgba(250, 247, 250, 0.55);
+    box-shadow: 0px 4px 23px 3px rgba(250, 247, 250, 0.55);
+}
+
 .container-2 {
     position: relative;
     text-align: center;
     color: #353b48;
 }
+
 .row {
-margin-top: 3%;
+    margin-top: 3%;
 }
-/*.centered {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    !*background-color: white;*!*/
-/*    color: #353b48;*/
-/*    font-size: 25px;*/
-/*    !*border: 5px solid black;*!*/
-/*    padding: 5px;*/
-/*    background-clip: padding-box;*/
-/*}*/
-/*.centered-1 {*/
-/*    position: absolute;*/
-/*    top: 30%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    background-color: #353b48;*/
-/*    color: white;*/
-/*    font-size: 30px;*/
-/*    border: 5px solid black;*/
-/*    padding: 5px;*/
-/*    background-clip: padding-box;*/
-/*}*/
+
 .card-group {
     width: 85%;
     margin: auto;
     padding-bottom: 10%;
 }
+
 .card-title, .card-text {
     text-align: center;
 }
+
 .card-title {
-    font-size: 22px ;
+    font-size: 22px;
 }
+
 .card-text {
     font-size: 25px;
-    /*font-weight: bold;*/
 }
 
-/*.card {*/
-/*background: 0 0;*/
-/*}*/
 
+a:link, a:visited {
+    color: #353b48;
+}
+
+a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
