@@ -2,6 +2,7 @@
     document.querySelector(".container-2").style.display = "none";
     document.querySelector(".container-2").style.display = "none";
     document.querySelector(".forecast").style.display = "none";
+
     function gropedByDate(dataArray) {
         let ref = {};
         const res = dataArray.reduce(function (gropedData, elem) {
@@ -17,16 +18,17 @@
         return res;
     }
 
-    // function picOfCity() {
-    //     let input = document.getElementById('city_input').value
-    //     // await fetch(`https://api.unsplash.com/search/photos/1600x900/?query=${input}&client_id=${secretKey2}`)
-    //     //     .then(response => response.json())
-    //     //     .then((data) => {
-    //     //         console.log(data)
-    //     document.getElementById("img").src = `https://source.unsplash.com/1400x800/?${input},city`
-    //
-    //     // })
-    // }
+    async function picOfCity() {
+        let input = document.getElementById('city_input').value
+        // await fetch(`https://api.unsplash.com/search/photos/1600x900/?query=${input}&client_id=${secretKey2}`)
+        //     .then(response => response.json())
+        //     .then((data) => {
+        //         console.log(data)
+        document.getElementById("img").src = `https://source.unsplash.com/1200x600/?${input},city`
+
+        // })
+    }
+
     function daysOftheWeek(day) {
         let monthNames = [
             "January",
@@ -59,9 +61,8 @@
         // let yyyy = today.getFullYear();
         let fullDate = dayname + " " + dd + " " + mm
 
-         return fullDate
-    };
-
+        return fullDate
+    }
 
 
     function weatherApp() {
@@ -80,7 +81,7 @@
                     }, 0);
                     let avgBe = totalWeather / tempArr.length
                     document.querySelector(".centered").innerHTML = Math.round(avgBe) + "°C"
-                    document.querySelector(".centered-1").innerHTML = "Today " + "in " + input
+                    document.getElementById("centered-1").innerHTML = "Today " + "in " + input
                     document.querySelector(".centered-2").src = `http://openweathermap.org/img/wn/${formatData[0][0].weather[0].icon}@2x.png`
                     document.querySelector(".centered-3").innerHTML = formatData[0][0].weather[0].description
                 }
@@ -92,7 +93,7 @@
                     let avgBe = totalWeather / tempArr.length
                     document.getElementById("day2t").innerHTML = Math.round(avgBe) + "°C"
                     document.getElementById("day2").innerHTML = daysOftheWeek(formatData[1][i].dt_txt.split(" ")[0])
-                    document.getElementById("day2Icon").src = `http://openweathermap.org/img/wn/${formatData[1][0].weather[0].icon}@2x.png`
+                    document.getElementById("day2Icon").src = `http://openweathermap.org/img/wn/${formatData[1][3].weather[0].icon}@2x.png`
                 }
                 for (let i = 0; i < formatData[2].length; i++) {
                     tempArr.push(formatData[2][i].main.temp)
@@ -102,7 +103,7 @@
                     let avgBe = totalWeather / tempArr.length
                     document.getElementById("day3t").innerHTML = Math.round(avgBe) + "°C"
                     document.getElementById("day3").innerHTML = daysOftheWeek(formatData[2][i].dt_txt.split(" ")[0])
-                    document.getElementById("day3Icon").src = `http://openweathermap.org/img/wn/${formatData[2][0].weather[0].icon}@2x.png`
+                    document.getElementById("day3Icon").src = `http://openweathermap.org/img/wn/${formatData[2][3].weather[0].icon}@2x.png`
                 }
                 for (let i = 0; i < formatData[3].length; i++) {
                     tempArr.push(formatData[3][i].main.temp)
@@ -112,7 +113,7 @@
                     let avgBe = totalWeather / tempArr.length
                     document.getElementById("day4t").innerHTML = Math.round(avgBe) + "°C"
                     document.getElementById("day4").innerHTML = daysOftheWeek(formatData[3][i].dt_txt.split(" ")[0])
-                    document.getElementById("day4Icon").src = `http://openweathermap.org/img/wn/${formatData[3][0].weather[0].icon}@2x.png`
+                    document.getElementById("day4Icon").src = `http://openweathermap.org/img/wn/${formatData[3][3].weather[0].icon}@2x.png`
                 }
                 for (let i = 0; i < formatData[4].length; i++) {
                     tempArr.push(formatData[4][i].main.temp)
@@ -122,22 +123,21 @@
                     let avgBe = totalWeather / tempArr.length
                     document.getElementById("day5t").innerHTML = Math.round(avgBe) + "°C"
                     document.getElementById("day5").innerHTML = daysOftheWeek(formatData[4][i].dt_txt.split(" ")[0])
-                    document.getElementById("day5Icon").src = `http://openweathermap.org/img/wn/${formatData[4][0].weather[0].icon}@2x.png`
-
-
-                        console.log(formatData[0][0].weather[0])
+                    document.getElementById("day5Icon").src = `http://openweathermap.org/img/wn/${formatData[4][3].weather[0].icon}@2x.png`
+                    // console.log(formatData[4][3])
                 }
 
 
-            })
+            }).catch(() => {
+            console.error("error")
+        })
 
     }
 
 
     document.getElementById('run').addEventListener('click', function () {
         weatherApp();
-        // picOfCity();
-        // document.querySelector(".container-2").style.display = 'block'
+        picOfCity();
         document.querySelector(".container-2").style.display = "block";
         document.querySelector(".forecast").style.display = "inline";
     });
@@ -145,39 +145,12 @@
     document.getElementById('city_input').addEventListener('keyup', function (e) {
         if (e.key === 'Enter') {
             weatherApp();
-            // picOfCity();
-            // document.querySelector(".container-2").style.display = 'block'
+            picOfCity();
             document.querySelector(".container-2").style.display = "block";
             document.querySelector(".forecast").style.display = "inline";
         }
     });
 
 })();
-
-//     let tempAr = []
-//     for (let i = 0; i < temp.length; i++) {
-//         console.log(temp[i].dt_txt.split(" ")[1])
-//         if (temp[i].dt_txt.split(" ")[1] === "00:00:00") {
-//             break
-//         }
-//         tempAr.push(temp[i].main.temp)
-//         console.log(tempAr)
-//         const total = tempAr.reduce(function (a, b) {
-//             return a + b;
-//         }, 0);
-//         let avgBe = total / tempAr.length
-//         console.log(Math.round(avgBe))
-//         document.querySelector(".day1").innerHTML = temp[i].dt_txt.split(" ")[0]
-//         document.querySelector(".day1t").innerHTML = Math.round(avgBe)
-//
-//         let avV = temp[i].main.temp
-//         avV += temp[i].main.temp
-//         console.log(avV)
-//         let avPerDay = temp[i].main.temp / 4
-//         console.log(avPerDay)
-//         console.log(all)
-//     }
-//
-//
 
 
