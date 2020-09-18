@@ -20,10 +20,10 @@
 <div class="wrap">
     <h1>Weather Forecast</h1>
     <div class="card-body topCard">
-        <h3 class="card-title centered-1" style = "text-transform:uppercase;"></h3>
+        <h3 class="card-title centered-1" style="text-transform:uppercase;"></h3>
         <h3 class="card-text centered"></h3>
         <img class="card-text centered-2" src=""/>
-        <h3 class="card-text centered-3"></h3>
+        <h3 class="card-text centered-3" style="text-transform:capitalize;"></h3>
     </div>
 </div>
 
@@ -35,41 +35,104 @@
         </div>
     </div>
 </div>
+
 <div class="container-2">
-    <div class="forecast">
-        <h3>For next four days:</h3>
-        <div class="card-group">
-            <div class="card mr-2">
-                <div class="card-body">
-                    <h4 class="card-title day2"></h4>
-                    <p class="card-text day2t"></p>
+<div class="forecast">
+    <h3>For next four days:</h3>
+        <div class="row d-flex justify-content-center">
+            <div class="col-2">
+                <p>
+                    <button class="btn btn-light btn-lg" id="day2" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample1">
+                    <img id="day2Icon" src="">
+                    <p  id="day2t">
+                    </p>
                 </div>
             </div>
-            <div class="card mr-2">
-                <div class="card-body">
-                    <h4 class="card-title day3"></h4>
-                    <p class="card-text day3t"></p>
+            <div class="col-2">
+                <p>
+                    <button class="btn btn-light btn-lg" id="day3" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample2">
+                    <img id="day3Icon" src="">
+                    <p  id="day3t">
+                    </p>
                 </div>
             </div>
-            <div class="card mr-2">
-                <div class="card-body">
-                    <h4 class="card-title day4"></h4>
-                    <p class="card-text day4t"></p>
+            <div class="col-2">
+                <p>
+                    <button class="btn btn-light btn-lg" id="day4" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample3">
+                    <img id="day4Icon" src="">
+                    <p  id="day4t">
+                    </p>
                 </div>
             </div>
-            <div class="card mr-2">
-                <div class="card-body">
-                    <h4 class="card-title day5"></h4>
-                    <p class="card-text day5t"></p>
+            <div class="col-2">
+                <p>
+                    <button class="btn btn-light btn-lg" id="day5" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample4">
+                    <img id="day5Icon" src="">
+                    <p  id="day5t">
+                    </p>
                 </div>
             </div>
         </div>
-        <!--        <img id="img" class="d-flex align-self-center" src=""-->
-        <!--             alt="Generic placeholder image">-->
-        <!--        <div class="centered"></div>-->
-        <!--        <div class="centered-1"></div>-->
+
     </div>
 </div>
+<!--<div class="container-2">-->
+<!--    <div class="forecast">-->
+<!--        <h3>For next four days:</h3>-->
+<!--        <div class="card-group d-flex justify-content-center">-->
+<!--            <div class="mr-1 col-3">-->
+<!--                <div class="card-body">-->
+<!--                    <button class="btn btn-light card-title day2 day2t" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"></button>-->
+<!--                    <div class="collapse" id="collapseExample4">-->
+<!--                        <div class="card card-body">-->
+<!--                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad-->
+<!--                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente-->
+<!--                            ea proident.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="mr-1 col-3">-->
+<!--                <div class="card-body">-->
+<!--                    <button class="btn btn-light card-title day2 day2t" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4"></button>-->
+<!--                    <div class="collapse" id="collapseExample4">-->
+<!--                        <div class="card card-body">-->
+<!--                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad-->
+<!--                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente-->
+<!--                            ea proident.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="mr-1">-->
+<!--                <div class="card-body">-->
+<!--                    <button class="btn btn-light card-title day4 day4t"></button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="mr-1">-->
+<!--                <div class="card-body">-->
+<!--                    <button class="btn btn-light card-title day5 day5t"></button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        <img id="img" class="d-flex align-self-center" src=""&ndash;&gt;-->
+<!--        &lt;!&ndash;             alt="Generic placeholder image">&ndash;&gt;-->
+<!--        &lt;!&ndash;        <div class="centered"></div>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <div class="centered-1"></div>&ndash;&gt;-->
+<!--    </div>-->
+<!--</div>-->
 <script src="script.js"></script>
 <script src="key.js"></script>
 <!-- Optional JavaScript -->
