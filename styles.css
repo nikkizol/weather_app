@@ -87,6 +87,9 @@ img {
     text-align: center;
     color: #353b48;
 }
+.row {
+margin-top: 3%;
+}
 /*.centered {*/
 /*    position: absolute;*/
 /*    top: 50%;*/
@@ -112,7 +115,7 @@ img {
 /*    background-clip: padding-box;*/
 /*}*/
 .card-group {
-    width: 80%;
+    width: 85%;
     margin: auto;
     padding-bottom: 10%;
 }
@@ -126,3 +129,8 @@ img {
     font-size: 25px;
     /*font-weight: bold;*/
 }
+
+/*.card {*/
+/*background: 0 0;*/
+/*}*/
+
