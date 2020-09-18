@@ -1,6 +1,6 @@
 (() => {
     document.querySelector(".container-2").style.display = "none";
-    document.querySelector(".card-group").style.display = "none";
+    document.querySelector(".container-2").style.display = "none";
     document.querySelector(".forecast").style.display = "none";
     function gropedByDate(dataArray) {
         let ref = {};
@@ -90,8 +90,9 @@
                         return a + b;
                     }, 0);
                     let avgBe = totalWeather / tempArr.length
-                    document.querySelector(".day2t").innerHTML = Math.round(avgBe) + "°C"
-                    document.querySelector(".day2").innerHTML = daysOftheWeek(formatData[1][i].dt_txt.split(" ")[0])
+                    document.getElementById("day2t").innerHTML = Math.round(avgBe) + "°C"
+                    document.getElementById("day2").innerHTML = daysOftheWeek(formatData[1][i].dt_txt.split(" ")[0])
+                    document.getElementById("day2Icon").src = `http://openweathermap.org/img/wn/${formatData[1][0].weather[0].icon}@2x.png`
                 }
                 for (let i = 0; i < formatData[2].length; i++) {
                     tempArr.push(formatData[2][i].main.temp)
@@ -99,8 +100,9 @@
                         return a + b;
                     }, 0);
                     let avgBe = totalWeather / tempArr.length
-                    document.querySelector(".day3t").innerHTML = Math.round(avgBe) + "°C"
-                    document.querySelector(".day3").innerHTML = daysOftheWeek(formatData[2][i].dt_txt.split(" ")[0])
+                    document.getElementById("day3t").innerHTML = Math.round(avgBe) + "°C"
+                    document.getElementById("day3").innerHTML = daysOftheWeek(formatData[2][i].dt_txt.split(" ")[0])
+                    document.getElementById("day3Icon").src = `http://openweathermap.org/img/wn/${formatData[2][0].weather[0].icon}@2x.png`
                 }
                 for (let i = 0; i < formatData[3].length; i++) {
                     tempArr.push(formatData[3][i].main.temp)
@@ -108,8 +110,9 @@
                         return a + b;
                     }, 0);
                     let avgBe = totalWeather / tempArr.length
-                    document.querySelector(".day4t").innerHTML = Math.round(avgBe) + "°C"
-                    document.querySelector(".day4").innerHTML = daysOftheWeek(formatData[3][i].dt_txt.split(" ")[0])
+                    document.getElementById("day4t").innerHTML = Math.round(avgBe) + "°C"
+                    document.getElementById("day4").innerHTML = daysOftheWeek(formatData[3][i].dt_txt.split(" ")[0])
+                    document.getElementById("day4Icon").src = `http://openweathermap.org/img/wn/${formatData[3][0].weather[0].icon}@2x.png`
                 }
                 for (let i = 0; i < formatData[4].length; i++) {
                     tempArr.push(formatData[4][i].main.temp)
@@ -117,8 +120,9 @@
                         return a + b;
                     }, 0);
                     let avgBe = totalWeather / tempArr.length
-                    document.querySelector(".day5t").innerHTML = Math.round(avgBe) + "°C"
-                    document.querySelector(".day5").innerHTML = daysOftheWeek(formatData[4][i].dt_txt.split(" ")[0])
+                    document.getElementById("day5t").innerHTML = Math.round(avgBe) + "°C"
+                    document.getElementById("day5").innerHTML = daysOftheWeek(formatData[4][i].dt_txt.split(" ")[0])
+                    document.getElementById("day5Icon").src = `http://openweathermap.org/img/wn/${formatData[4][0].weather[0].icon}@2x.png`
 
 
                         console.log(formatData[0][0].weather[0])
@@ -133,8 +137,8 @@
     document.getElementById('run').addEventListener('click', function () {
         weatherApp();
         // picOfCity();
-        document.querySelector(".container-2").style.display = 'block'
-        document.querySelector(".card-group").style.display = "flex";
+        // document.querySelector(".container-2").style.display = 'block'
+        document.querySelector(".container-2").style.display = "block";
         document.querySelector(".forecast").style.display = "inline";
     });
 
@@ -142,8 +146,8 @@
         if (e.key === 'Enter') {
             weatherApp();
             // picOfCity();
-            document.querySelector(".container-2").style.display = 'block'
-            document.querySelector(".card-group").style.display = "flex";
+            // document.querySelector(".container-2").style.display = 'block'
+            document.querySelector(".container-2").style.display = "block";
             document.querySelector(".forecast").style.display = "inline";
         }
     });
