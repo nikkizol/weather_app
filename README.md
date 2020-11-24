@@ -1,5 +1,7 @@
 # The weather application
 
+## IMPORTAMT:
+### In order to use the code, it's necessary to generate a key on this [platfomr](https://openweathermap.org). Then after you cloned this repo, create a file "key.js" in project directory and write there - const secretKey = "HERE_SHOULD_BE_YOUR_KEY" 
 ## Practical Information
 
 * Repository: `ajax-weather-api`
