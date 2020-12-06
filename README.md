@@ -2,11 +2,11 @@
 
 ## IMPORTAMT:
 ### In order to use the code, it's necessary to generate a key on this [platform](https://openweathermap.org). Then after you cloned this repo, create a file "key.js" in project directory and write there - const secretKey = "HERE_SHOULD_BE_YOUR_KEY" 
-## Practical Information
 
 ## Screenshot
 ![Screenshot!](https://raw.githubusercontent.com/nikkizol/weather_app/master/search_result.png)
 
+## Practical Information
 * Repository: `ajax-weather-api`
 * Deadline: 3 days
 * Delivery: Github page (published)
